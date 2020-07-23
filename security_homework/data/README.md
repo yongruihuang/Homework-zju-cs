@@ -1,3 +1,10 @@
+# 安装依赖
+运行环境python3.6，pytorch 1.1.0
+在对应python版本下，运行文件夹内的requirements.txt
+
+    pip install -r requirements.txt
+
+
 # 运行测试集
 
 读取base model结果,stacking model，进行预测
