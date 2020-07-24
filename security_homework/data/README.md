@@ -86,7 +86,7 @@
 
 ## Step 2: 训练模型
 
-- 使用了ESIM,RE2,transfomer 3种基本模型，并进行以下优化
+- 使用了[ESIM](https://github.com/coetaur0/ESIM), [RE2](https://github.com/alibaba-edu/simple-effective-text-matching-pytorch),transfomer 3种基本模型，并进行以下优化
 - ESIM & RE2: 将esim和re2的pair sequence输入改造成单输入，作为额外的模型和原本的模型融合
 - ESIM & RE2: ESIM和RE2除了原本的输入，使用了time和click time的embedding，引入time和click time信息
 - ESIM: 改造了ESIM的点积注意力部分，引入SVD形式的注意力，此外，在ESIM第二层LSTM之前使用residual机制将模型输入和之前block的输出拼接输入最后的LSTM中
