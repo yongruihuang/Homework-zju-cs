@@ -1,8 +1,37 @@
 # 安装依赖
-运行环境python3.6，pytorch 1.1.0
+运行环境python3.6
+具体依赖：
+
+    gensim==3.8.1
+    numpy==1.17.3
+    torchcontrib==0.0.2
+    category_encoders==2.2.2
+    matplotlib==3.1.3
+    pandas==0.25.3
+    torch==1.1.0
+    transformers==2.5.1
+    scipy==1.3.1
+    lightgbm==2.3.0
+    tqdm==4.36.1
+    apex==0.9.10dev
+    ipython==7.16.1
+    scikit_learn==0.23.1
+
 在对应python版本下，运行文件夹内的requirements.txt
 
     pip install -r requirements.txt
+
+# 概率文件
+
+保存为var/test_x.npy，读取方式
+
+    import numpy as np
+    data = np.load("var/test.npy")
+
+概率文件的shape为(1000000, 404), 1000000代表1000000个数据样本
+
+- 404中的前384维，每12维代表一个模型的的输出，12维中前两个维度是gender的概率，后10维是aged的概率。
+- 404中的后20维，为1个20分类模型的概率输出
 
 
 # 运行测试集
@@ -63,7 +92,7 @@
 - ESIM: 改造了ESIM的点积注意力部分，引入SVD形式的注意力，此外，在ESIM第二层LSTM之前使用residual机制将模型输入和之前block的输出拼接输入最后的LSTM中
 - Transfomer: 使用time sequence作为transfomer position embedding的index，同时，使用click对attention部分权重进行缩放
 - RE2: RE2的单输入模型将max pool和sum pool拼接作为hidden
-- 学习策略: 部分model使用了label smoothing，才用AdamW为优化器，使用线性的learing rate scheduler.
+- 学习策略: 部分model使用了label smoothing，采用AdamW为优化器，使用线性的learing rate scheduler.
 
 
     cd ../fjw
