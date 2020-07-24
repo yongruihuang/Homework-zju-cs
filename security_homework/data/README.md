@@ -94,6 +94,7 @@
 - RE2: RE2的单输入模型将max pool和sum pool拼接作为hidden
 - 学习策略: 部分model使用了label smoothing，采用AdamW为优化器，使用线性的learing rate scheduler.
 
+代码步骤
 
     cd ../fjw
     nohup python train_ESIM_glove200.py > log.train_ESIM_glove200
