@@ -97,13 +97,11 @@
 
     cd ../fjw
     nohup python train_ESIM_glove200.py > log.train_ESIM_glove200
-    nohup python train_ESIM_glove50.py > log.train_ESIM_glove50
-    '''
-    
+    nohup python train_ESIM_glove50.py > log.train_ESIM_glove50 ...
     cd ../hyr
     nohup python train_re2_50dim_20_class.py > log.train_re2_50dim_20_class
-    nohup python train_re2_one_200caa_glove_lr0003_smooth_wd005.py > log.train_re2_one_200caa_glove_lr0003_smooth_wd005
-    '''
+    nohup python train_re2_one_200caa_glove_lr0003_smooth_wd005.py > log.train_re2_one_200caa_glove_lr0003_smooth_wd005 ...
+    
 
 Step 3: 模型融合
 
